@@ -1,0 +1,14 @@
+---
+Checks: >
+  -*,
+  bugprone-*,
+  clang-analyzer-*,
+  cppcoreguidelines-*,
+  modernize-*,
+  performance-*,
+  readability-*
+WarningsAsErrors: ''
+HeaderFilterRegex: 'include/tinytensor/.*'
+FormatStyle: file
+CheckOptions:
+  cppcoreguidelines-avoid-magic-numbers.IgnoredIntegerValues: '0;1;2;3;4;8;16;32;64;128;256;512;1024'

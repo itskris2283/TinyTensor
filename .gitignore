@@ -1,0 +1,53 @@
+# Git ignore for TinyTensor
+
+# Build artifacts
+build/
+build_*/
+bin/
+lib/
+*.o
+*.obj
+*.so
+*.dylib
+*.dll
+*.a
+*.lib
+*.exp
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+.eggs/
+.venv
+.venv/
+venv/
+env/
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+*.gcda
+*.gcno
+*.gcov
+
+# IDE and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Kernel compilation cache (runtime generated)
+.tinytensor_cache/
+/tmp/tinytensor_*
+
+# Benchmark results
+benchmarks/results/raw_samples.csv
+benchmarks/results/*.json
+benchmarks/plots/*.png

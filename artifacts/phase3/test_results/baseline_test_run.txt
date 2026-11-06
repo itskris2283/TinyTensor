@@ -1,0 +1,154 @@
+========================================
+TinyTensor Bounded Verification Suite
+========================================
+--> Running: ctest --test-dir /mnt/d/MERN/TinyTensor/build --output-on-failure -j 4
+Internal ctest changing into directory: /mnt/d/MERN/TinyTensor/build
+Test project /mnt/d/MERN/TinyTensor/build
+    Start 5: RuntimeCodegenTests
+    Start 4: OptimizerTests
+    Start 1: CoreTests
+    Start 3: AutodiffTests
+1/5 Test #4: OptimizerTests ...................   Passed    0.04 sec
+    Start 2: GraphIRTests
+2/5 Test #1: CoreTests ........................   Passed    0.08 sec
+3/5 Test #3: AutodiffTests ....................   Passed    0.11 sec
+4/5 Test #2: GraphIRTests .....................   Passed    0.11 sec
+5/5 Test #5: RuntimeCodegenTests ..............   Passed   31.72 sec
+
+100% tests passed, 0 tests failed out of 5
+
+Total Test time (real) =  31.81 sec
+
+PASSED: C++ tests completed in 31.96s
+
+--> Running: /root/tinytensor_venv/bin/pytest -v --tb=short tests/python
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.2.0, pluggy-1.7.0 -- /root/tinytensor_venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /mnt/d/MERN/TinyTensor
+configfile: pyproject.toml
+plugins: cov-7.1.0
+collecting ... collected 114 items
+
+tests/python/test_autodiff.py::test_autodiff_add PASSED                  [  0%]
+tests/python/test_autodiff.py::test_autodiff_mul PASSED                  [  1%]
+tests/python/test_autodiff.py::test_autodiff_relu PASSED                 [  2%]
+tests/python/test_autodiff.py::test_autodiff_sigmoid PASSED              [  3%]
+tests/python/test_autodiff.py::test_autodiff_matmul PASSED               [  4%]
+tests/python/test_autodiff.py::test_autodiff_unbroadcasting PASSED       [  5%]
+tests/python/test_autodiff.py::test_autodiff_multipath PASSED            [  6%]
+tests/python/test_autodiff.py::test_autodiff_finite_difference_composite PASSED [  7%]
+tests/python/test_autodiff.py::test_autodiff_subtraction PASSED          [  7%]
+tests/python/test_autodiff.py::test_autodiff_division PASSED             [  8%]
+tests/python/test_autodiff.py::test_autodiff_transpose PASSED            [  9%]
+tests/python/test_autodiff.py::test_autodiff_mean_loss PASSED            [ 10%]
+tests/python/test_autodiff.py::test_autodiff_higher_rank_unbroadcasting PASSED [ 11%]
+tests/python/test_autodiff.py::test_autodiff_branching_reconvergence PASSED [ 12%]
+tests/python/test_broadcasting.py::test_broadcast_vector_to_matrix PASSED [ 13%]
+tests/python/test_broadcasting.py::test_broadcast_singleton_expansion PASSED [ 14%]
+tests/python/test_broadcasting.py::test_broadcast_scalar PASSED          [ 14%]
+tests/python/test_broadcasting.py::test_broadcast_incompatible_throws PASSED [ 15%]
+tests/python/test_broadcasting.py::test_broadcast_lower_rank_target_throws PASSED [ 16%]
+tests/python/test_compiler.py::test_compile_modes_agreement PASSED       [ 17%]
+tests/python/test_compiler.py::test_compiler_ir_inspection PASSED        [ 18%]
+tests/python/test_compiler.py::test_compiler_dot_graph PASSED            [ 19%]
+tests/python/test_compiler.py::test_compiler_repeated_run PASSED         [ 20%]
+tests/python/test_compiler.py::test_compiler_missing_input_raises PASSED [ 21%]
+tests/python/test_compiler.py::test_compiler_multi_output PASSED         [ 21%]
+tests/python/test_compiler.py::test_compiler_profiler_integration PASSED [ 22%]
+tests/python/test_compiler.py::test_compiler_scalar_mode_correctness PASSED [ 23%]
+tests/python/test_compiler.py::test_compiler_large_matmul PASSED         [ 24%]
+tests/python/test_compiler.py::test_compiler_diagnostic_apis PASSED      [ 25%]
+tests/python/test_compiler.py::test_compiler_six_way_cross_backend_differential PASSED [ 26%]
+tests/python/test_compiler.py::test_compiler_batched_matmul_compiled PASSED [ 27%]
+tests/python/test_coverage_boost.py::test_sgd_optimizer_step PASSED      [ 28%]
+tests/python/test_coverage_boost.py::test_benchmark_function_utility PASSED [ 28%]
+tests/python/test_coverage_boost.py::test_graph_functional_operators_coverage PASSED [ 29%]
+tests/python/test_coverage_boost.py::test_tensor_conversion_branches PASSED [ 30%]
+tests/python/test_coverage_boost.py::test_profiler_repr_and_properties PASSED [ 31%]
+tests/python/test_coverage_boost.py::test_node_dunder_operators PASSED   [ 32%]
+tests/python/test_coverage_boost.py::test_compiler_coverage_branches PASSED [ 33%]
+tests/python/test_differential.py::test_diff_elementwise_add[shape0] PASSED [ 34%]
+tests/python/test_differential.py::test_diff_elementwise_add[shape1] PASSED [ 35%]
+tests/python/test_differential.py::test_diff_elementwise_add[shape2] PASSED [ 35%]
+tests/python/test_differential.py::test_diff_elementwise_mul[shape0] PASSED [ 36%]
+tests/python/test_differential.py::test_diff_elementwise_mul[shape1] PASSED [ 37%]
+tests/python/test_differential.py::test_diff_elementwise_mul[shape2] PASSED [ 38%]
+tests/python/test_differential.py::test_diff_relu PASSED                 [ 39%]
+tests/python/test_differential.py::test_diff_sigmoid PASSED              [ 40%]
+tests/python/test_differential.py::test_diff_matmul[8-16-12] PASSED      [ 41%]
+tests/python/test_differential.py::test_diff_matmul[32-32-32] PASSED     [ 42%]
+tests/python/test_differential.py::test_diff_matmul[3-7-5] PASSED        [ 42%]
+tests/python/test_differential.py::test_diff_reduce_sum_and_mean PASSED  [ 43%]
+tests/python/test_differential.py::test_diff_autodiff_matmul PASSED      [ 44%]
+tests/python/test_differential.py::test_diff_autodiff_mlp PASSED         [ 45%]
+tests/python/test_differential.py::test_diff_elementwise_sub[shape0] PASSED [ 46%]
+tests/python/test_differential.py::test_diff_elementwise_sub[shape1] PASSED [ 47%]
+tests/python/test_differential.py::test_diff_elementwise_sub[shape2] PASSED [ 48%]
+tests/python/test_differential.py::test_diff_elementwise_div[shape0] PASSED [ 49%]
+tests/python/test_differential.py::test_diff_elementwise_div[shape1] PASSED [ 50%]
+tests/python/test_differential.py::test_diff_elementwise_div[shape2] PASSED [ 50%]
+tests/python/test_differential.py::test_diff_broadcasting_add PASSED     [ 51%]
+tests/python/test_differential.py::test_diff_transpose_matmul PASSED     [ 52%]
+tests/python/test_memory.py::test_numpy_array_lifetime PASSED            [ 53%]
+tests/python/test_memory.py::test_repeated_tensor_allocation_and_destruction PASSED [ 54%]
+tests/python/test_memory.py::test_view_shared_storage PASSED             [ 55%]
+tests/python/test_memory.py::test_clone_deep_copy PASSED                 [ 56%]
+tests/python/test_memory.py::test_allocation_limit_throws PASSED         [ 57%]
+tests/python/test_operations.py::test_elementwise_add_sub_mul_div PASSED [ 57%]
+tests/python/test_operations.py::test_relu PASSED                        [ 58%]
+tests/python/test_operations.py::test_sigmoid PASSED                     [ 59%]
+tests/python/test_operations.py::test_matmul_2d PASSED                   [ 60%]
+tests/python/test_operations.py::test_reduce_sum_and_mean PASSED         [ 61%]
+tests/python/test_operations.py::test_reduce_axes PASSED                 [ 62%]
+tests/python/test_operations.py::test_sub_negative_results PASSED        [ 63%]
+tests/python/test_operations.py::test_div_by_constants PASSED            [ 64%]
+tests/python/test_operations.py::test_chained_arithmetic PASSED          [ 64%]
+tests/python/test_operations.py::test_reduce_negative_axes PASSED        [ 65%]
+tests/python/test_operations.py::test_reduce_mean_axes PASSED            [ 66%]
+tests/python/test_operations.py::test_elementwise_float64 PASSED         [ 67%]
+tests/python/test_operations.py::test_matmul_identity PASSED             [ 68%]
+tests/python/test_optimizer.py::test_optimizer_constant_folding PASSED   [ 69%]
+tests/python/test_optimizer.py::test_optimizer_cse PASSED                [ 70%]
+tests/python/test_optimizer.py::test_optimizer_fusion PASSED             [ 71%]
+tests/python/test_optimizer.py::test_optimizer_dead_code_elimination PASSED [ 71%]
+tests/python/test_optimizer.py::test_optimizer_memory_savings PASSED     [ 72%]
+tests/python/test_shapes.py::test_shape_scalar PASSED                    [ 73%]
+tests/python/test_shapes.py::test_shape_vector PASSED                    [ 74%]
+tests/python/test_shapes.py::test_shape_matrix PASSED                    [ 75%]
+tests/python/test_shapes.py::test_shape_higher_rank PASSED               [ 76%]
+tests/python/test_shapes.py::test_shape_zero_dimension PASSED            [ 77%]
+tests/python/test_shapes.py::test_shape_negative_dimension_throws PASSED [ 78%]
+tests/python/test_shapes.py::test_shape_equality PASSED                  [ 78%]
+tests/python/test_shapes.py::test_shape_max_rank_exceeded PASSED         [ 79%]
+tests/python/test_shapes.py::test_shape_repr PASSED                      [ 80%]
+tests/python/test_shapes.py::test_shape_inequality PASSED                [ 81%]
+tests/python/test_shapes.py::test_shape_numel_multiplication PASSED      [ 82%]
+tests/python/test_shapes.py::test_shape_single_element_vector PASSED     [ 83%]
+tests/python/test_tensor.py::test_tensor_creation_from_list PASSED       [ 84%]
+tests/python/test_tensor.py::test_tensor_creation_from_scalar PASSED     [ 85%]
+tests/python/test_tensor.py::test_tensor_creation_from_numpy PASSED      [ 85%]
+tests/python/test_tensor.py::test_tensor_zeros PASSED                    [ 86%]
+tests/python/test_tensor.py::test_tensor_ones PASSED                     [ 87%]
+tests/python/test_tensor.py::test_tensor_full PASSED                     [ 88%]
+tests/python/test_tensor.py::test_tensor_scalar PASSED                   [ 89%]
+tests/python/test_tensor.py::test_tensor_view_and_reshape PASSED         [ 90%]
+tests/python/test_tensor.py::test_tensor_transpose PASSED                [ 91%]
+tests/python/test_tensor.py::test_tensor_permute PASSED                  [ 92%]
+tests/python/test_tensor.py::test_tensor_clone_independence PASSED       [ 92%]
+tests/python/test_tensor.py::test_tensor_contiguous PASSED               [ 93%]
+tests/python/test_tensor.py::test_invalid_view_throws PASSED             [ 94%]
+tests/python/test_tensor.py::test_invalid_item_call PASSED               [ 95%]
+tests/python/test_tensor.py::test_tensor_repr PASSED                     [ 96%]
+tests/python/test_tensor.py::test_tensor_nbytes PASSED                   [ 97%]
+tests/python/test_tensor.py::test_tensor_scalar_item PASSED              [ 98%]
+tests/python/test_tensor.py::test_tensor_permute_3d PASSED               [ 99%]
+tests/python/test_tensor.py::test_tensor_empty PASSED                    [100%]
+
+======================= 114 passed in 128.32s (0:02:08) ========================
+
+PASSED: Python tests completed in 130.70s
+
+========================================
+ALL TEST SUITES PASSED SUCCESSFULLY!
+========================================

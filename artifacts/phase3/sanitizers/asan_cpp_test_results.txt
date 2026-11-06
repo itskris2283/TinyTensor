@@ -1,0 +1,15 @@
+Test project /mnt/d/MERN/TinyTensor/build_asan
+    Start 1: CoreTests
+1/5 Test #1: CoreTests ........................   Passed    9.15 sec
+    Start 2: GraphIRTests
+2/5 Test #2: GraphIRTests .....................   Passed    0.14 sec
+    Start 3: AutodiffTests
+3/5 Test #3: AutodiffTests ....................   Passed    0.15 sec
+    Start 4: OptimizerTests
+4/5 Test #4: OptimizerTests ...................   Passed    0.17 sec
+    Start 5: RuntimeCodegenTests
+5/5 Test #5: RuntimeCodegenTests ..............   Passed   27.75 sec
+
+100% tests passed, 0 tests failed out of 5
+
+Total Test time (real) =  37.49 sec

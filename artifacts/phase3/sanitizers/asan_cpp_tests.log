@@ -1,0 +1,486 @@
+Running main() from ./googletest/src/gtest_main.cc
+[==========] Running 64 tests from 8 test suites.
+[----------] Global test environment set-up.
+[----------] 17 tests from TensorTest
+[ RUN      ] TensorTest.CreationAndBasics
+[       OK ] TensorTest.CreationAndBasics (0 ms)
+[ RUN      ] TensorTest.OnesAndFull
+[       OK ] TensorTest.OnesAndFull (0 ms)
+[ RUN      ] TensorTest.ScalarItem
+[       OK ] TensorTest.ScalarItem (3 ms)
+[ RUN      ] TensorTest.NegativeIndexing
+[       OK ] TensorTest.NegativeIndexing (1 ms)
+[ RUN      ] TensorTest.TransposeSemantics
+[       OK ] TensorTest.TransposeSemantics (0 ms)
+[ RUN      ] TensorTest.PermuteSemantics
+[       OK ] TensorTest.PermuteSemantics (1 ms)
+[ RUN      ] TensorTest.ViewAndReshape
+[       OK ] TensorTest.ViewAndReshape (0 ms)
+[ RUN      ] TensorTest.CloneIndependence
+[       OK ] TensorTest.CloneIndependence (1 ms)
+[ RUN      ] TensorTest.ContiguousCopy
+[       OK ] TensorTest.ContiguousCopy (0 ms)
+[ RUN      ] TensorTest.TypeMismatchThrows
+[       OK ] TensorTest.TypeMismatchThrows (0 ms)
+[ RUN      ] TensorTest.HigherDimensionalTensors
+[       OK ] TensorTest.HigherDimensionalTensors (0 ms)
+[ RUN      ] TensorTest.ZeroSizedTensor
+[       OK ] TensorTest.ZeroSizedTensor (0 ms)
+[ RUN      ] TensorTest.DoublePrecisionArithmeticAndStorage
+[       OK ] TensorTest.DoublePrecisionArithmeticAndStorage (0 ms)
+[ RUN      ] TensorTest.OffsetAccess
+[       OK ] TensorTest.OffsetAccess (0 ms)
+[ RUN      ] TensorTest.MultipleTransposes
+[       OK ] TensorTest.MultipleTransposes (0 ms)
+[ RUN      ] TensorTest.ContiguousOnContiguousIsZeroCopy
+[       OK ] TensorTest.ContiguousOnContiguousIsZeroCopy (0 ms)
+[ RUN      ] TensorTest.EmptyFactory
+[       OK ] TensorTest.EmptyFactory (0 ms)
+[----------] 17 tests from TensorTest (45 ms total)
+
+[----------] 7 tests from ShapeTest
+[ RUN      ] ShapeTest.ScalarShape
+[       OK ] ShapeTest.ScalarShape (0 ms)
+[ RUN      ] ShapeTest.VectorShape
+[       OK ] ShapeTest.VectorShape (0 ms)
+[ RUN      ] ShapeTest.MultiDimShape
+[       OK ] ShapeTest.MultiDimShape (0 ms)
+[ RUN      ] ShapeTest.ZeroDimShape
+[       OK ] ShapeTest.ZeroDimShape (0 ms)
+[ RUN      ] ShapeTest.NegativeDimensionThrows
+[       OK ] ShapeTest.NegativeDimensionThrows (0 ms)
+[ RUN      ] ShapeTest.MaxRankExceededThrows
+[       OK ] ShapeTest.MaxRankExceededThrows (0 ms)
+[ RUN      ] ShapeTest.OutOfBoundsIndexThrows
+[       OK ] ShapeTest.OutOfBoundsIndexThrows (0 ms)
+[----------] 7 tests from ShapeTest (17 ms total)
+
+[----------] 3 tests from StridesTest
+[ RUN      ] StridesTest.ContiguousComputation
+[       OK ] StridesTest.ContiguousComputation (0 ms)
+[ RUN      ] StridesTest.ScalarStrides
+[       OK ] StridesTest.ScalarStrides (0 ms)
+[ RUN      ] StridesTest.NonContiguousDetection
+[       OK ] StridesTest.NonContiguousDetection (0 ms)
+[----------] 3 tests from StridesTest (6 ms total)
+
+[----------] 5 tests from BroadcastingTest
+[ RUN      ] BroadcastingTest.BroadcastShapesRules
+[       OK ] BroadcastingTest.BroadcastShapesRules (0 ms)
+[ RUN      ] BroadcastingTest.IncompatibleShapesThrows
+[       OK ] BroadcastingTest.IncompatibleShapesThrows (0 ms)
+[ RUN      ] BroadcastingTest.BroadcastToZeroStride
+[       OK ] BroadcastingTest.BroadcastToZeroStride (0 ms)
+[ RUN      ] BroadcastingTest.BroadcastScalarToND
+[       OK ] BroadcastingTest.BroadcastScalarToND (0 ms)
+[ RUN      ] BroadcastingTest.IncompatibleBroadcastToThrows
+[       OK ] BroadcastingTest.IncompatibleBroadcastToThrows (0 ms)
+[----------] 5 tests from BroadcastingTest (11 ms total)
+
+[----------] 5 tests from StorageTest
+[ RUN      ] StorageTest.AlignedAllocation
+[       OK ] StorageTest.AlignedAllocation (1 ms)
+[ RUN      ] StorageTest.ZeroBytesAllocation
+[       OK ] StorageTest.ZeroBytesAllocation (0 ms)
+[ RUN      ] StorageTest.ExternalNonOwningStorage
+[       OK ] StorageTest.ExternalNonOwningStorage (0 ms)
+[ RUN      ] StorageTest.MoveSemantics
+[       OK ] StorageTest.MoveSemantics (0 ms)
+[ RUN      ] StorageTest.ExceedsResourceLimit
+[       OK ] StorageTest.ExceedsResourceLimit (0 ms)
+[----------] 5 tests from StorageTest (9 ms total)
+
+[----------] 16 tests from OperatorsTest
+[ RUN      ] OperatorsTest.AddSubMulDiv
+[       OK ] OperatorsTest.AddSubMulDiv (2 ms)
+[ RUN      ] OperatorsTest.BroadcastBinaryOps
+[       OK ] OperatorsTest.BroadcastBinaryOps (0 ms)
+[ RUN      ] OperatorsTest.Relu
+[       OK ] OperatorsTest.Relu (0 ms)
+[ RUN      ] OperatorsTest.SigmoidNumericallyStable
+[       OK ] OperatorsTest.SigmoidNumericallyStable (0 ms)
+[ RUN      ] OperatorsTest.Matmul2D
+[       OK ] OperatorsTest.Matmul2D (1 ms)
+[ RUN      ] OperatorsTest.MatmulDimensionMismatchThrows
+[       OK ] OperatorsTest.MatmulDimensionMismatchThrows (0 ms)
+[ RUN      ] OperatorsTest.ReduceSumAllAndAxes
+[       OK ] OperatorsTest.ReduceSumAllAndAxes (1 ms)
+[ RUN      ] OperatorsTest.ReduceMean
+[       OK ] OperatorsTest.ReduceMean (0 ms)
+[ RUN      ] OperatorsTest.Float64BasicOperations
+[       OK ] OperatorsTest.Float64BasicOperations (0 ms)
+[ RUN      ] OperatorsTest.BatchedMatMul3D
+[       OK ] OperatorsTest.BatchedMatMul3D (0 ms)
+[ RUN      ] OperatorsTest.DivisionByZeroIEEE754
+[       OK ] OperatorsTest.DivisionByZeroIEEE754 (0 ms)
+[ RUN      ] OperatorsTest.ReduceSumMultiAxes
+[       OK ] OperatorsTest.ReduceSumMultiAxes (0 ms)
+[ RUN      ] OperatorsTest.ReduceMeanKeepdims
+[       OK ] OperatorsTest.ReduceMeanKeepdims (0 ms)
+[ RUN      ] OperatorsTest.NonContiguousElementwise
+[       OK ] OperatorsTest.NonContiguousElementwise (0 ms)
+[ RUN      ] OperatorsTest.Float64AdvancedOperations
+[       OK ] OperatorsTest.Float64AdvancedOperations (1 ms)
+[ RUN      ] OperatorsTest.NonContiguousAndFloat64Coverage
+[       OK ] OperatorsTest.NonContiguousAndFloat64Coverage (0 ms)
+[----------] 16 tests from OperatorsTest (37 ms total)
+
+[----------] 4 tests from NumericalEdgeCasesTest
+[ RUN      ] NumericalEdgeCasesTest.IEEE754SpecialValuesEagerArithmetic
+[       OK ] NumericalEdgeCasesTest.IEEE754SpecialValuesEagerArithmetic (0 ms)
+[ RUN      ] NumericalEdgeCasesTest.ReLUSemanticContract
+[       OK ] NumericalEdgeCasesTest.ReLUSemanticContract (2504 ms)
+[ RUN      ] NumericalEdgeCasesTest.SigmoidExtremesStability
+[       OK ] NumericalEdgeCasesTest.SigmoidExtremesStability (0 ms)
+[ RUN      ] NumericalEdgeCasesTest.FMACancellationAndULPDistance
+[       OK ] NumericalEdgeCasesTest.FMACancellationAndULPDistance (3325 ms)
+[----------] 4 tests from NumericalEdgeCasesTest (5838 ms total)
+
+[----------] 7 tests from CoreBranchExpansionTest
+[ RUN      ] CoreBranchExpansionTest.TensorNegativeIndexingAndBounds
+[       OK ] CoreBranchExpansionTest.TensorNegativeIndexingAndBounds (0 ms)
+[ RUN      ] CoreBranchExpansionTest.ZeroSizedTensorSemantics
+[       OK ] CoreBranchExpansionTest.ZeroSizedTensorSemantics (0 ms)
+[ RUN      ] CoreBranchExpansionTest.ReshapeInferenceAndErrors
+[       OK ] CoreBranchExpansionTest.ReshapeInferenceAndErrors (0 ms)
+[ RUN      ] CoreBranchExpansionTest.PermuteValidationAndErrors
+[       OK ] CoreBranchExpansionTest.PermuteValidationAndErrors (3 ms)
+[ RUN      ] CoreBranchExpansionTest.Float64OperatorsExhaustive
+[       OK ] CoreBranchExpansionTest.Float64OperatorsExhaustive (0 ms)
+[ RUN      ] CoreBranchExpansionTest.NonContiguousOperandsBinaryOps
+[       OK ] CoreBranchExpansionTest.NonContiguousOperandsBinaryOps (0 ms)
+[ RUN      ] CoreBranchExpansionTest.OperatorsErrorBranches
+[       OK ] CoreBranchExpansionTest.OperatorsErrorBranches (0 ms)
+[----------] 7 tests from CoreBranchExpansionTest (20 ms total)
+
+[----------] Global test environment tear-down
+[==========] 64 tests from 8 test suites ran. (6003 ms total)
+[  PASSED  ] 64 tests.
+Running main() from ./googletest/src/gtest_main.cc
+[==========] Running 41 tests from 4 test suites.
+[----------] Global test environment set-up.
+[----------] 9 tests from GraphTest
+[ RUN      ] GraphTest.NodeCreationAndTypes
+[       OK ] GraphTest.NodeCreationAndTypes (3 ms)
+[ RUN      ] GraphTest.ConstantNode
+[       OK ] GraphTest.ConstantNode (1 ms)
+[ RUN      ] GraphTest.TopologicalSort
+[       OK ] GraphTest.TopologicalSort (1 ms)
+[ RUN      ] GraphTest.CycleDetection
+[       OK ] GraphTest.CycleDetection (2 ms)
+[ RUN      ] GraphTest.GraphClone
+[       OK ] GraphTest.GraphClone (0 ms)
+[ RUN      ] GraphTest.MultipleOutputs
+[       OK ] GraphTest.MultipleOutputs (0 ms)
+[ RUN      ] GraphTest.UnaryOperationChains
+[       OK ] GraphTest.UnaryOperationChains (0 ms)
+[ RUN      ] GraphTest.InputNameUniqueness
+[       OK ] GraphTest.InputNameUniqueness (0 ms)
+[ RUN      ] GraphTest.NodeUserTracking
+[       OK ] GraphTest.NodeUserTracking (0 ms)
+[----------] 9 tests from GraphTest (33 ms total)
+
+[----------] 2 tests from IRTest
+[ RUN      ] IRTest.SerializationOutput
+[       OK ] IRTest.SerializationOutput (2 ms)
+[ RUN      ] IRTest.DotGraphExport
+[       OK ] IRTest.DotGraphExport (0 ms)
+[----------] 2 tests from IRTest (7 ms total)
+
+[----------] 23 tests from IRVerifierTest
+[ RUN      ] IRVerifierTest.ValidGraphPasses
+[       OK ] IRVerifierTest.ValidGraphPasses (0 ms)
+[ RUN      ] IRVerifierTest.ArityViolationThrows
+[       OK ] IRVerifierTest.ArityViolationThrows (0 ms)
+[ RUN      ] IRVerifierTest.TypeMismatchThrows
+[       OK ] IRVerifierTest.TypeMismatchThrows (0 ms)
+[ RUN      ] IRVerifierTest.ShapeMismatchInMatmulThrows
+[       OK ] IRVerifierTest.ShapeMismatchInMatmulThrows (0 ms)
+[ RUN      ] IRVerifierTest.ValidTransposeVerifier
+[       OK ] IRVerifierTest.ValidTransposeVerifier (0 ms)
+[ RUN      ] IRVerifierTest.ValidReductionVerifier
+[       OK ] IRVerifierTest.ValidReductionVerifier (0 ms)
+[ RUN      ] IRVerifierTest.NullOutputThrows
+[       OK ] IRVerifierTest.NullOutputThrows (0 ms)
+[ RUN      ] IRVerifierTest.UnaryArityViolationThrows
+[       OK ] IRVerifierTest.UnaryArityViolationThrows (0 ms)
+[ RUN      ] IRVerifierTest.TransposeArityThrows
+[       OK ] IRVerifierTest.TransposeArityThrows (0 ms)
+[ RUN      ] IRVerifierTest.MatMulInvalidInputsThrows
+[       OK ] IRVerifierTest.MatMulInvalidInputsThrows (0 ms)
+[ RUN      ] IRVerifierTest.ReductionArityThrows
+[       OK ] IRVerifierTest.ReductionArityThrows (1 ms)
+[ RUN      ] IRVerifierTest.CycleDetectionThrows
+[       OK ] IRVerifierTest.CycleDetectionThrows (0 ms)
+[ RUN      ] IRVerifierTest.NegativeDimensionInputThrows
+[       OK ] IRVerifierTest.NegativeDimensionInputThrows (0 ms)
+[ RUN      ] IRVerifierTest.TransposeOutOfBoundsAxesThrows
+[       OK ] IRVerifierTest.TransposeOutOfBoundsAxesThrows (0 ms)
+[ RUN      ] IRVerifierTest.TransposeShapeMismatchThrows
+[       OK ] IRVerifierTest.TransposeShapeMismatchThrows (0 ms)
+[ RUN      ] IRVerifierTest.ReductionAxisOutOfBoundsThrows
+[       OK ] IRVerifierTest.ReductionAxisOutOfBoundsThrows (0 ms)
+[ RUN      ] IRVerifierTest.ReductionShapeMismatchThrows
+[       OK ] IRVerifierTest.ReductionShapeMismatchThrows (0 ms)
+[ RUN      ] IRVerifierTest.BinaryOpShapeMismatchThrows
+[       OK ] IRVerifierTest.BinaryOpShapeMismatchThrows (0 ms)
+[ RUN      ] IRVerifierTest.UnaryOpShapeMismatchThrows
+[       OK ] IRVerifierTest.UnaryOpShapeMismatchThrows (0 ms)
+[ RUN      ] IRVerifierTest.MatMulBatchShapeMismatchThrows
+[       OK ] IRVerifierTest.MatMulBatchShapeMismatchThrows (0 ms)
+[ RUN      ] IRVerifierTest.ConstantShapeMismatchThrows
+[       OK ] IRVerifierTest.ConstantShapeMismatchThrows (0 ms)
+[ RUN      ] IRVerifierTest.FusedElementwiseEmptyInputsThrows
+[       OK ] IRVerifierTest.FusedElementwiseEmptyInputsThrows (0 ms)
+[ RUN      ] IRVerifierTest.DeepTypeMismatchesAndInvariants
+[       OK ] IRVerifierTest.DeepTypeMismatchesAndInvariants (3 ms)
+[----------] 23 tests from IRVerifierTest (64 ms total)
+
+[----------] 7 tests from IRVerifierBranchExpansionTest
+[ RUN      ] IRVerifierBranchExpansionTest.NullInputOperandThrows
+[       OK ] IRVerifierBranchExpansionTest.NullInputOperandThrows (0 ms)
+[ RUN      ] IRVerifierBranchExpansionTest.BinaryOpArityAndTypeMismatches
+[       OK ] IRVerifierBranchExpansionTest.BinaryOpArityAndTypeMismatches (3 ms)
+[ RUN      ] IRVerifierBranchExpansionTest.UnaryOpArityAndTypeMismatches
+[       OK ] IRVerifierBranchExpansionTest.UnaryOpArityAndTypeMismatches (0 ms)
+[ RUN      ] IRVerifierBranchExpansionTest.MatMulArityInnerDimAndRankMismatches
+[       OK ] IRVerifierBranchExpansionTest.MatMulArityInnerDimAndRankMismatches (1 ms)
+[ RUN      ] IRVerifierBranchExpansionTest.TransposeAxesBoundariesAndMismatches
+[       OK ] IRVerifierBranchExpansionTest.TransposeAxesBoundariesAndMismatches (1 ms)
+[ RUN      ] IRVerifierBranchExpansionTest.ReductionAxesNegativeAndOutOfBounds
+[       OK ] IRVerifierBranchExpansionTest.ReductionAxesNegativeAndOutOfBounds (2 ms)
+[ RUN      ] IRVerifierBranchExpansionTest.GraphOutputValidation
+[       OK ] IRVerifierBranchExpansionTest.GraphOutputValidation (0 ms)
+[----------] 7 tests from IRVerifierBranchExpansionTest (25 ms total)
+
+[----------] Global test environment tear-down
+[==========] 41 tests from 4 test suites ran. (141 ms total)
+[  PASSED  ] 41 tests.
+Running main() from ./googletest/src/gtest_main.cc
+[==========] Running 22 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 16 tests from AutodiffTest
+[ RUN      ] AutodiffTest.AddGrad
+[       OK ] AutodiffTest.AddGrad (9 ms)
+[ RUN      ] AutodiffTest.SubGrad
+[       OK ] AutodiffTest.SubGrad (1 ms)
+[ RUN      ] AutodiffTest.MulGrad
+[       OK ] AutodiffTest.MulGrad (2 ms)
+[ RUN      ] AutodiffTest.MultiPathAccumulation
+[       OK ] AutodiffTest.MultiPathAccumulation (1 ms)
+[ RUN      ] AutodiffTest.ReluGrad
+[       OK ] AutodiffTest.ReluGrad (4 ms)
+[ RUN      ] AutodiffTest.MatMulGrad
+[       OK ] AutodiffTest.MatMulGrad (1 ms)
+[ RUN      ] AutodiffTest.BroadcastUnbroadcasting
+[       OK ] AutodiffTest.BroadcastUnbroadcasting (1 ms)
+[ RUN      ] AutodiffTest.FiniteDifferencesVerification
+[       OK ] AutodiffTest.FiniteDifferencesVerification (1 ms)
+[ RUN      ] AutodiffTest.DivGrad
+[       OK ] AutodiffTest.DivGrad (1 ms)
+[ RUN      ] AutodiffTest.TransposeGrad
+[       OK ] AutodiffTest.TransposeGrad (0 ms)
+[ RUN      ] AutodiffTest.ReduceMeanGrad
+[       OK ] AutodiffTest.ReduceMeanGrad (0 ms)
+[ RUN      ] AutodiffTest.TwoLayerMLPBackward
+[       OK ] AutodiffTest.TwoLayerMLPBackward (1 ms)
+[ RUN      ] AutodiffTest.ReusedOperandSquare
+[       OK ] AutodiffTest.ReusedOperandSquare (0 ms)
+[ RUN      ] AutodiffTest.BranchingReconvergence
+[       OK ] AutodiffTest.BranchingReconvergence (1 ms)
+[ RUN      ] AutodiffTest.HighRankUnbroadcasting
+[       OK ] AutodiffTest.HighRankUnbroadcasting (1 ms)
+[ RUN      ] AutodiffTest.FiniteDifferenceNumericalCheck
+[       OK ] AutodiffTest.FiniteDifferenceNumericalCheck (2 ms)
+[----------] 16 tests from AutodiffTest (68 ms total)
+
+[----------] 6 tests from AutodiffBranchExpansionTest
+[ RUN      ] AutodiffBranchExpansionTest.UnbroadcastEdgeCases
+[       OK ] AutodiffBranchExpansionTest.UnbroadcastEdgeCases (1 ms)
+[ RUN      ] AutodiffBranchExpansionTest.NullLossNodeThrows
+[       OK ] AutodiffBranchExpansionTest.NullLossNodeThrows (3 ms)
+[ RUN      ] AutodiffBranchExpansionTest.SubtractionGradientBroadcasting
+[       OK ] AutodiffBranchExpansionTest.SubtractionGradientBroadcasting (0 ms)
+[ RUN      ] AutodiffBranchExpansionTest.DivisionGradientBroadcasting
+[       OK ] AutodiffBranchExpansionTest.DivisionGradientBroadcasting (1 ms)
+[ RUN      ] AutodiffBranchExpansionTest.Transpose3DGradient
+[       OK ] AutodiffBranchExpansionTest.Transpose3DGradient (1 ms)
+[ RUN      ] AutodiffBranchExpansionTest.UnusedGraphNodeSkippedInBackward
+[       OK ] AutodiffBranchExpansionTest.UnusedGraphNodeSkippedInBackward (0 ms)
+[----------] 6 tests from AutodiffBranchExpansionTest (24 ms total)
+
+[----------] Global test environment tear-down
+[==========] 22 tests from 2 test suites ran. (100 ms total)
+[  PASSED  ] 22 tests.
+Running main() from ./googletest/src/gtest_main.cc
+[==========] Running 13 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 7 tests from OptimizerTest
+[ RUN      ] OptimizerTest.ConstantFolding
+[       OK ] OptimizerTest.ConstantFolding (11 ms)
+[ RUN      ] OptimizerTest.ConstantFoldingExtendedOps
+[       OK ] OptimizerTest.ConstantFoldingExtendedOps (4 ms)
+[ RUN      ] OptimizerTest.DeadCodeElimination
+[       OK ] OptimizerTest.DeadCodeElimination (0 ms)
+[ RUN      ] OptimizerTest.CommonSubexpressionElimination
+[       OK ] OptimizerTest.CommonSubexpressionElimination (1 ms)
+[ RUN      ] OptimizerTest.ElementwiseFusion
+[       OK ] OptimizerTest.ElementwiseFusion (1 ms)
+[ RUN      ] OptimizerTest.MemoryPlannerDiagnostics
+[       OK ] OptimizerTest.MemoryPlannerDiagnostics (1 ms)
+[ RUN      ] OptimizerTest.FullPipelineOptimization
+[       OK ] OptimizerTest.FullPipelineOptimization (5 ms)
+[----------] 7 tests from OptimizerTest (38 ms total)
+
+[----------] 6 tests from AdversarialMemoryPlannerTest
+[ RUN      ] AdversarialMemoryPlannerTest.DeepMLPAlternatingReuse
+[       OK ] AdversarialMemoryPlannerTest.DeepMLPAlternatingReuse (1 ms)
+[ RUN      ] AdversarialMemoryPlannerTest.BranchingAndReconvergentNoAliasing
+[       OK ] AdversarialMemoryPlannerTest.BranchingAndReconvergentNoAliasing (0 ms)
+[ RUN      ] AdversarialMemoryPlannerTest.MultipleOutputsRetention
+[       OK ] AdversarialMemoryPlannerTest.MultipleOutputsRetention (0 ms)
+[ RUN      ] AdversarialMemoryPlannerTest.SharedIntermediateStaggeredUsers
+[       OK ] AdversarialMemoryPlannerTest.SharedIntermediateStaggeredUsers (1 ms)
+[ RUN      ] AdversarialMemoryPlannerTest.DisjointSubgraphsReuse
+[       OK ] AdversarialMemoryPlannerTest.DisjointSubgraphsReuse (0 ms)
+[ RUN      ] AdversarialMemoryPlannerTest.ProcessMemoryAndRSSInstrumentation
+[       OK ] AdversarialMemoryPlannerTest.ProcessMemoryAndRSSInstrumentation (59 ms)
+[----------] 6 tests from AdversarialMemoryPlannerTest (79 ms total)
+
+[----------] Global test environment tear-down
+[==========] 13 tests from 2 test suites ran. (124 ms total)
+[  PASSED  ] 13 tests.
+Running main() from ./googletest/src/gtest_main.cc
+[==========] Running 52 tests from 8 test suites.
+[----------] Global test environment set-up.
+[----------] 5 tests from InterpreterTest
+[ RUN      ] InterpreterTest.BasicArithmetic
+[       OK ] InterpreterTest.BasicArithmetic (15 ms)
+[ RUN      ] InterpreterTest.MatMulAndRelu
+[       OK ] InterpreterTest.MatMulAndRelu (1 ms)
+[ RUN      ] InterpreterTest.ProfilerRecording
+[       OK ] InterpreterTest.ProfilerRecording (2 ms)
+[ RUN      ] InterpreterTest.SubDivSigmoidTransposeReductions
+[       OK ] InterpreterTest.SubDivSigmoidTransposeReductions (3 ms)
+[ RUN      ] InterpreterTest.ErrorPaths
+[       OK ] InterpreterTest.ErrorPaths (6 ms)
+[----------] 5 tests from InterpreterTest (40 ms total)
+
+[----------] 5 tests from ExecutorTest
+[ RUN      ] ExecutorTest.InterpretedMode
+[       OK ] ExecutorTest.InterpretedMode (2 ms)
+[ RUN      ] ExecutorTest.CompiledScalarMode
+[       OK ] ExecutorTest.CompiledScalarMode (983 ms)
+[ RUN      ] ExecutorTest.CompiledAVX2Mode
+[       OK ] ExecutorTest.CompiledAVX2Mode (2037 ms)
+[ RUN      ] ExecutorTest.DiagnosticApis
+[       OK ] ExecutorTest.DiagnosticApis (1422 ms)
+[ RUN      ] ExecutorTest.MissingInputThrows
+[       OK ] ExecutorTest.MissingInputThrows (862 ms)
+[----------] 5 tests from ExecutorTest (5319 ms total)
+
+[----------] 10 tests from CodegenTest
+[ RUN      ] CodegenTest.GenerateSourceString
+[       OK ] CodegenTest.GenerateSourceString (0 ms)
+[ RUN      ] CodegenTest.CompileAndExecuteDirectly
+[       OK ] CodegenTest.CompileAndExecuteDirectly (811 ms)
+[ RUN      ] CodegenTest.ScalarFallbackAgreementWithAVX2
+[       OK ] CodegenTest.ScalarFallbackAgreementWithAVX2 (2351 ms)
+[ RUN      ] CodegenTest.MatMulKernelCompilation
+[       OK ] CodegenTest.MatMulKernelCompilation (1138 ms)
+[ RUN      ] CodegenTest.SigmoidCompilation
+[       OK ] CodegenTest.SigmoidCompilation (790 ms)
+[ RUN      ] CodegenTest.DiagnosticSourceInspection
+[       OK ] CodegenTest.DiagnosticSourceInspection (790 ms)
+[ RUN      ] CodegenTest.BatchedMatMulCompiled
+[       OK ] CodegenTest.BatchedMatMulCompiled (822 ms)
+[ RUN      ] CodegenTest.ExecutableErrorPaths
+[       OK ] CodegenTest.ExecutableErrorPaths (781 ms)
+[ RUN      ] CodegenTest.ComprehensiveOpsCompilation
+[       OK ] CodegenTest.ComprehensiveOpsCompilation (903 ms)
+[ RUN      ] CodegenTest.DisassemblyAVX2Verification
+[       OK ] CodegenTest.DisassemblyAVX2Verification (1437 ms)
+[----------] 10 tests from CodegenTest (9846 ms total)
+
+[----------] 4 tests from AVX2Test
+[ RUN      ] AVX2Test.FeatureDetection
+[       OK ] AVX2Test.FeatureDetection (1 ms)
+[ RUN      ] AVX2Test.ElementwiseAddVectorTail
+[       OK ] AVX2Test.ElementwiseAddVectorTail (0 ms)
+[ RUN      ] AVX2Test.ElementwiseReluVectorTail
+[       OK ] AVX2Test.ElementwiseReluVectorTail (0 ms)
+[ RUN      ] AVX2Test.ElementwiseSubAndMulVectorTail
+[       OK ] AVX2Test.ElementwiseSubAndMulVectorTail (0 ms)
+[----------] 4 tests from AVX2Test (8 ms total)
+
+[----------] 12 tests from CPUFeaturesTest
+[ RUN      ] CPUFeaturesTest.MaxLeafTooLowReturnsScalar
+[       OK ] CPUFeaturesTest.MaxLeafTooLowReturnsScalar (0 ms)
+[ RUN      ] CPUFeaturesTest.AVXUnavailableReturnsScalar
+[       OK ] CPUFeaturesTest.AVXUnavailableReturnsScalar (0 ms)
+[ RUN      ] CPUFeaturesTest.OSXSAVEUnavailableReturnsScalar
+[       OK ] CPUFeaturesTest.OSXSAVEUnavailableReturnsScalar (0 ms)
+[ RUN      ] CPUFeaturesTest.XCR0XMMBitDisabledReturnsScalar
+[       OK ] CPUFeaturesTest.XCR0XMMBitDisabledReturnsScalar (0 ms)
+[ RUN      ] CPUFeaturesTest.XCR0YMMBitDisabledReturnsScalar
+[       OK ] CPUFeaturesTest.XCR0YMMBitDisabledReturnsScalar (0 ms)
+[ RUN      ] CPUFeaturesTest.AVX2UnavailableReturnsScalar
+[       OK ] CPUFeaturesTest.AVX2UnavailableReturnsScalar (0 ms)
+[ RUN      ] CPUFeaturesTest.AVX2AvailableWithoutFMA3
+[       OK ] CPUFeaturesTest.AVX2AvailableWithoutFMA3 (0 ms)
+[ RUN      ] CPUFeaturesTest.BothAVX2AndFMA3Available
+[       OK ] CPUFeaturesTest.BothAVX2AndFMA3Available (0 ms)
+[ RUN      ] CPUFeaturesTest.HostConsistencyAndFeatureString
+[       OK ] CPUFeaturesTest.HostConsistencyAndFeatureString (0 ms)
+[ RUN      ] CPUFeaturesTest.MatMulCodegenEmitsNonFMAWhenFMADisabled
+[       OK ] CPUFeaturesTest.MatMulCodegenEmitsNonFMAWhenFMADisabled (0 ms)
+[ RUN      ] CPUFeaturesTest.MatMulCodegenEmitsFMAWhenFMAEnabled
+[       OK ] CPUFeaturesTest.MatMulCodegenEmitsFMAWhenFMAEnabled (0 ms)
+[ RUN      ] CPUFeaturesTest.MatMulExecutionAVX2NoFMACorrectness
+[       OK ] CPUFeaturesTest.MatMulExecutionAVX2NoFMACorrectness (1438 ms)
+[----------] 12 tests from CPUFeaturesTest (1461 ms total)
+
+[----------] 4 tests from KernelCacheTest
+[ RUN      ] KernelCacheTest.KeyDeterminism
+[       OK ] KernelCacheTest.KeyDeterminism (0 ms)
+[ RUN      ] KernelCacheTest.CompilationHitAndMiss
+[       OK ] KernelCacheTest.CompilationHitAndMiss (854 ms)
+[ RUN      ] KernelCacheTest.CorruptionDetectionAndRecovery
+[       OK ] KernelCacheTest.CorruptionDetectionAndRecovery (27 ms)
+[ RUN      ] KernelCacheTest.SourceRetentionAndRetrieval
+[       OK ] KernelCacheTest.SourceRetentionAndRetrieval (813 ms)
+[----------] 4 tests from KernelCacheTest (1701 ms total)
+
+[----------] 7 tests from CompilerFailureRecoveryTest
+[ RUN      ] CompilerFailureRecoveryTest.MissingCompilerBinaryThrowsCompileError
+[       OK ] CompilerFailureRecoveryTest.MissingCompilerBinaryThrowsCompileError (1 ms)
+[ RUN      ] CompilerFailureRecoveryTest.CompilerPathIsDirectoryThrowsCompileError
+[       OK ] CompilerFailureRecoveryTest.CompilerPathIsDirectoryThrowsCompileError (0 ms)
+[ RUN      ] CompilerFailureRecoveryTest.CompilationAbnormalTerminationReturnsStderr
+[       OK ] CompilerFailureRecoveryTest.CompilationAbnormalTerminationReturnsStderr (43 ms)
+[ RUN      ] CompilerFailureRecoveryTest.CompilationTimeoutEnforced
+[       OK ] CompilerFailureRecoveryTest.CompilationTimeoutEnforced (1014 ms)
+[ RUN      ] CompilerFailureRecoveryTest.CorruptedCacheDLOpenFailureRecovery
+[       OK ] CompilerFailureRecoveryTest.CorruptedCacheDLOpenFailureRecovery (854 ms)
+[ RUN      ] CompilerFailureRecoveryTest.MissingEntrySymbolDLOpenRecovery
+[       OK ] CompilerFailureRecoveryTest.MissingEntrySymbolDLOpenRecovery (1186 ms)
+[ RUN      ] CompilerFailureRecoveryTest.ConcurrentCacheWrites
+[       OK ] CompilerFailureRecoveryTest.ConcurrentCacheWrites (1041 ms)
+[----------] 7 tests from CompilerFailureRecoveryTest (4154 ms total)
+
+[----------] 5 tests from CodegenBranchExpansionTest
+[ RUN      ] CodegenBranchExpansionTest.Float64ScalarCodegenAndExecution
+[       OK ] CodegenBranchExpansionTest.Float64ScalarCodegenAndExecution (762 ms)
+[ RUN      ] CodegenBranchExpansionTest.Float64MatMulCodegenAndExecution
+[       OK ] CodegenBranchExpansionTest.Float64MatMulCodegenAndExecution (772 ms)
+[ RUN      ] CodegenBranchExpansionTest.MultiDimReductionsWithAndWithoutKeepdims
+[       OK ] CodegenBranchExpansionTest.MultiDimReductionsWithAndWithoutKeepdims (804 ms)
+[ RUN      ] CodegenBranchExpansionTest.MultiDimTransposeCodegenAndExecution
+[       OK ] CodegenBranchExpansionTest.MultiDimTransposeCodegenAndExecution (762 ms)
+[ RUN      ] CodegenBranchExpansionTest.FusedElementwiseKernelExecution
+[       OK ] CodegenBranchExpansionTest.FusedElementwiseKernelExecution (713 ms)
+[----------] 5 tests from CodegenBranchExpansionTest (3824 ms total)
+
+[----------] Global test environment tear-down
+[==========] 52 tests from 8 test suites ran. (26373 ms total)
+[  PASSED  ] 52 tests.

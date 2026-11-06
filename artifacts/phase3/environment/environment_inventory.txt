@@ -1,0 +1,28 @@
+=== Host & Operating System ===
+OS: Ubuntu 24.04 LTS (WSL2)
+Kernel: Linux DESKTOP-N3D7KID 6.18.54.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC
+Architecture: x86_64
+Date: 2026-11-06
+
+=== CPU & Microarchitecture ===
+Model: Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz
+Logical Cores: 8 (Thread(s) per core: 2, Cores: 4)
+CPU Flags: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm arch_perfmon rep_good nopl xtopology cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pdcm pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch pti ssbd ibrs ibpb stibp tpr_shadow ept vpid ept_ad fsgsbase bmi1 hle avx2 smep bmi2 erms invpcid rtm rdseed adx smap clflushopt xsaveopt xsavec xgetbv1 xsaves vnmi md_clear flush_l1d arch_capabilities
+Supported ISA Features: AVX2, FMA3, BMI1, BMI2, SSE4.2, AVX, SSE2
+
+=== Memory ===
+RAM: 16 GB Total
+
+=== Compiler & Build Tools ===
+GCC: g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+CMake: cmake version 3.28.3
+Ninja: 1.11.1
+
+=== Python Virtual Environment ===
+Python: Python 3.12.3
+Pytest: pytest 9.2.0
+NumPy: 2.5.4
+PyTorch: 2.15.0+cpu
+pybind11: 3.1.0
+gcovr: gcovr 7.0
+EOF

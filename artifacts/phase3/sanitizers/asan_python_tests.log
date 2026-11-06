@@ -1,0 +1,26 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.2.0, pluggy-1.7.0 -- /root/tinytensor_venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /mnt/d/MERN/TinyTensor
+configfile: pyproject.toml
+plugins: cov-7.1.0
+collecting ... collected 126 items
+
+tests/python/test_autodiff.py::test_autodiff_add PASSED                  [  0%]
+tests/python/test_autodiff.py::test_autodiff_mul PASSED                  [  1%]
+tests/python/test_autodiff.py::test_autodiff_relu PASSED                 [  2%]
+tests/python/test_autodiff.py::test_autodiff_sigmoid PASSED              [  3%]
+tests/python/test_autodiff.py::test_autodiff_matmul PASSED               [  3%]
+tests/python/test_autodiff.py::test_autodiff_unbroadcasting PASSED       [  4%]
+tests/python/test_autodiff.py::test_autodiff_multipath PASSED            [  5%]
+tests/python/test_autodiff.py::test_autodiff_finite_difference_composite PASSED [  6%]
+tests/python/test_autodiff.py::test_autodiff_subtraction PASSED          [  7%]
+tests/python/test_autodiff.py::test_autodiff_division PASSED             [  7%]
+tests/python/test_autodiff.py::test_autodiff_transpose PASSED            [  8%]
+tests/python/test_autodiff.py::test_autodiff_mean_loss PASSED            [  9%]
+tests/python/test_autodiff.py::test_autodiff_higher_rank_unbroadcasting PASSED [ 10%]
+tests/python/test_autodiff.py::test_autodiff_branching_reconvergence PASSED [ 11%]
+tests/python/test_broadcasting.py::test_broadcast_vector_to_matrix PASSED [ 11%]
+tests/python/test_broadcasting.py::test_broadcast_singleton_expansion PASSED [ 12%]
+tests/python/test_broadcasting.py::test_broadcast_scalar PASSED          [ 13%]
+tests/python/test_broadcasting.py::test_broadcast_incompatible_throws 

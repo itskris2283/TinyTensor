@@ -1,0 +1,19 @@
+digraph TinyTensorGraph {
+  rankdir=TB;
+  node [shape=box, fontname="Helvetica", style=filled, fillcolor="#f0f4f8"];
+  node_0 [label="%0\ninput\n(2, 4)\nfloat32", fillcolor="#d1e7dd"];
+  node_1 [label="%1\ninput\n(4, 3)\nfloat32", fillcolor="#d1e7dd"];
+  node_2 [label="%2\nconstant\n(3,)\nfloat32", fillcolor="#fff3cd"];
+  node_3 [label="%3\nmatmul\n(2, 3)\nfloat32"];
+  node_0 -> node_3;
+  node_1 -> node_3;
+  node_4 [label="%4\nadd\n(2, 3)\nfloat32"];
+  node_3 -> node_4;
+  node_2 -> node_4;
+  node_5 [label="%5\nsigmoid\n(2, 3)\nfloat32"];
+  node_4 -> node_5;
+  node_6 [label="%6\nreduce_sum\n()\nfloat32"];
+  node_5 -> node_6;
+  node_6 [penwidth=2.5, color="#0d6efd"];
+  node_5 [penwidth=2.5, color="#0d6efd"];
+}

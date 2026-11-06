@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=64.0", "pybind11>=2.12.0", "cmake>=3.25"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tinytensor"
+version = "0.1.1rc2"
+description = "A research-grade tensor compiler, numerical runtime and automatic differentiation framework"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "TinyTensor Authors" }]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: C++",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+dependencies = [
+    "numpy>=1.26.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.1.0",
+    "ruff>=0.4.0",
+    "matplotlib>=3.8.0",
+    "torch>=2.2.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests/python"]
+python_files = ["test_*.py"]
+pythonpath = ["python"]
+addopts = "-v --strict-markers"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = ["B008"]
+
+[tool.ruff.lint.per-file-ignores]
+"benchmarks/*" = ["E402", "E501", "B007", "B905"]
+"tests/*" = ["E501", "B007", "B905", "F841", "B017"]
+"examples/*" = ["E501", "E402", "B007", "F841"]
+"scripts/*" = ["E402", "E501", "UP022", "E741"]

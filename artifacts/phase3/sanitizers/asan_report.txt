@@ -1,0 +1,35 @@
+================================================================================
+TinyTensor Phase III — AddressSanitizer (ASan) Verification Report
+================================================================================
+Generated: 2026-11-06
+Compiler Target: GCC 13.3.0
+Flags: -fsanitize=address -fno-omit-frame-pointer -g -O0
+Platform: Ubuntu 24.04 LTS (WSL2, x86_64)
+
+I. C++ GOOGLETEST SUITE (ASan Executable Build)
+--------------------------------------------------------------------------------
+1. test_core:              64/64  PASSED [0 heap-use-after-free, 0 buffer-overflow, 0 leaks]
+2. test_graph_ir:          41/41  PASSED [0 heap-use-after-free, 0 buffer-overflow, 0 leaks]
+3. test_autodiff:          22/22  PASSED [0 heap-use-after-free, 0 buffer-overflow, 0 leaks]
+4. test_optimizer:         13/13  PASSED [0 heap-use-after-free, 0 buffer-overflow, 0 leaks]
+5. test_runtime_codegen:   52/52  PASSED [0 heap-use-after-free, 0 buffer-overflow, 0 leaks]
+Total C++ Tests Under ASan: 192/192 PASSED (100%)
+
+II. PYTHON PYTEST SUITE (ASan Shared Library Extension Build)
+--------------------------------------------------------------------------------
+Preload: /usr/lib/gcc/x86_64-linux-gnu/13/libasan.so /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+Python Version: Python 3.12.3
+Total Python Tests Under ASan: 126/126 PASSED (100%)
+
+III. ASan SUMMARY OF FINDINGS
+--------------------------------------------------------------------------------
+- Heap Use-After-Free:              0 detected
+- Heap Buffer Overflow:             0 detected
+- Stack Buffer Overflow:            0 detected
+- Global Buffer Overflow:           0 detected
+- Memory Leaks:                     0 detected
+- Dynamic Kernel dlopen/dlclose:    0 memory leaks or corruptions detected
+- Thread Concurrency Safety:        0 race conditions detected during concurrent compile/cache tests
+
+STATUS: CLEAN / FULLY PASSING
+================================================================================

@@ -1,0 +1,32 @@
+================================================================================
+TinyTensor Phase III — UndefinedBehaviorSanitizer (UBSan) Verification Report
+================================================================================
+Generated: 2026-11-06
+Compiler Target: GCC 13.3.0
+Flags: -fsanitize=undefined -fno-omit-frame-pointer -g -O0
+Platform: Ubuntu 24.04 LTS (WSL2, x86_64)
+
+I. C++ GOOGLETEST SUITE (UBSan Executable Build)
+--------------------------------------------------------------------------------
+1. test_core:              64/64  PASSED [0 UB events, 0 unaligned accesses, 0 signed overflows]
+2. test_graph_ir:          41/41  PASSED [0 UB events, 0 null dereferences, 0 invalid casts]
+3. test_autodiff:          22/22  PASSED [0 UB events, 0 unbroadcast overflows]
+4. test_optimizer:         13/13  PASSED [0 UB events, 0 lifetime use violations]
+5. test_runtime_codegen:   52/52  PASSED [0 UB events, 0 SIMD unaligned loads]
+Total C++ Tests Under UBSan: 192/192 PASSED (100%)
+
+II. PYTHON PYTEST SUITE (UBSan Shared Library Extension Build)
+--------------------------------------------------------------------------------
+Total Python Tests Under UBSan: 126/126 PASSED (100%)
+
+III. UBSan SUMMARY OF FINDINGS
+--------------------------------------------------------------------------------
+- Signed Integer Overflow:          0 detected (all CheckedMath safe conversions verified)
+- Pointer Alignment Violations:     0 detected (all SIMD loads 32-byte aligned or unaligned-safe)
+- Null Pointer Dereference:         0 detected
+- Out-of-Bounds Bit Shifts:         0 detected
+- Floating-Point Division by Zero:  Controlled (IEEE 754 edge cases adhere to IEEE inf/nan)
+- Type Punning / Invalid Casts:     0 detected
+
+STATUS: CLEAN / FULLY PASSING
+================================================================================

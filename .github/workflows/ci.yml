@@ -1,0 +1,57 @@
+name: TinyTensor CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Toolchain and Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cmake ninja-build g++ libgtest-dev gcovr python3-dev python3-pip python3-venv
+
+      - name: Set up Python Virtual Environment
+        run: |
+          python3 -m venv venv
+          ./venv/bin/pip install --upgrade pip
+          ./venv/bin/pip install numpy torch pybind11 pytest pytest-cov ruff matplotlib
+
+      - name: Code Quality & Linting
+        run: |
+          ./venv/bin/ruff check python/ tests/python/ scripts/ examples/ benchmarks/
+
+      - name: Configure and Build (Release)
+        run: |
+          cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
+          ninja -C build
+
+      - name: Run C++ Unit Tests
+        run: |
+          ctest --test-dir build --output-on-failure
+
+      - name: Run Python Verification Tests
+        run: |
+          export PYTHONPATH="python:."
+          ./venv/bin/pytest -v tests/python
+
+      - name: Build and Test with Sanitizers (ASan + UBSan)
+        run: |
+          cmake -B build_asan -G Ninja -DENABLE_ASAN=ON -DCMAKE_BUILD_TYPE=Debug
+          ninja -C build_asan
+          ctest --test-dir build_asan --output-on-failure
+
+      - name: Run Code Coverage Check
+        run: |
+          cmake -B build_cov -G Ninja -DENABLE_COVERAGE=ON -DCMAKE_BUILD_TYPE=Debug
+          ninja -C build_cov
+          ctest --test-dir build_cov --output-on-failure
+          gcovr --root . --filter 'src/' --exclude 'src/codegen/cpp_backend.cpp' --fail-under-line 85
